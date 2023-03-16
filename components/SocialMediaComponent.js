@@ -1,8 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Linking } from "react-native";
 // Import to show social icons
 import { SocialIcon } from "react-native-elements";
-import { Linking } from "react-native";
 
 export const SocialMediaComponent = () => {
   const handleOpenLink = async (url) => {

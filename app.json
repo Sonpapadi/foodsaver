@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "foodsaver",
-    "slug": "foodsaver",
+    "slug": "foodsmart",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,21 +18,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.foodsavers.FoodSmart"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.foodsavers.FoodSmart"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "d2a28ddc-325a-4e6e-9c43-9ac76f836da8"
+        "projectId": "c4719ca3-29c1-4816-9e18-03ceab1e1ac5"
       }
-    }
+    },
+    "owner": "sonpapadi"
   }
 }

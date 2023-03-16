@@ -1,15 +1,16 @@
 import * as SMS from "expo-sms";
-import { Button } from "react-native-elements";
+import { Button } from "native-base";
 import { StyleSheet, Text, View, Image } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import { Call, VolunteerActivism } from '@mui/icons-material';
+
 
 export default SendSMSComponent = () => {
   const isAvailable = SMS.isAvailableAsync();
   const sendSMS = () => {
     if (isAvailable) {
       const { result } = SMS.sendSMSAsync(
-        ["7045912582"],
-        "Message Food Saver Volunteer"
+        ["7045912582", "8037166453", "7192296747", "7043188809", "7045022308"],
+        "Hello Foodsaver volunteers, I would love to donate food available for pickup at the below location:"
       );
       return result;
     } else {
@@ -19,8 +20,8 @@ export default SendSMSComponent = () => {
   const sendSMSJoinUs = () => {
     if (isAvailable) {
       const { result } = SMS.sendSMSAsync(
-        ["7045912582"],
-        "Interested in joining the team"
+        ["7045912582", "8037166453", "7192296747", "7043188809", "7045022308"],
+        "Hi FoodSavers Team , I am interested in joining the team of volunteers"
       );
       return result;
     } else {
@@ -37,25 +38,29 @@ export default SendSMSComponent = () => {
     >
       <Button
         style={styles.action1}
-        title="Contact US"
+        borderRadius='2xl'
         onPress={async () => {
           sendSMS();
         }}
-      />
+        // leftIcon={Call}
+      >Contact US</Button>
       <Button
         style={styles.action2}
-        title="Join US"
+        variant='outline'
+        backgroundColor='tertiary.500'
+        borderRadius='2xl'
         onPress={async () => {
           sendSMSJoinUs();
         }}
-      />
+        // leftIcon={<VolunteerActivism/>}  
+      >Join US</Button>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   action1: {
-    position: "relative"
+    position: "relative",
   },
   action2: {
     position: "relative",
