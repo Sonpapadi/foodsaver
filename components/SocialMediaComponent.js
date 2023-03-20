@@ -36,7 +36,9 @@ export const SocialMediaComponent = () => {
           <SocialIcon
             type="youtube"
             onPress={() => {
-              alert("youtube");
+              handleOpenLink(
+                "https://www.youtube.com/@foodsaversclub1856/featured"
+              );
             }}
           />
         </View>
@@ -44,7 +46,7 @@ export const SocialMediaComponent = () => {
           <SocialIcon
             type="facebook"
             onPress={() => {
-              alert("facebook");
+              handleOpenLink("https://www.facebook.com/FoodSaversClub/");
             }}
           />
         </View>
