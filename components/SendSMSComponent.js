@@ -1,8 +1,6 @@
 import * as SMS from "expo-sms";
 import { Button } from "native-base";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Call, VolunteerActivism } from '@mui/icons-material';
-
 
 export default SendSMSComponent = () => {
   const isAvailable = SMS.isAvailableAsync();
